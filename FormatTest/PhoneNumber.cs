@@ -20,14 +20,14 @@ namespace FormatTest
         {
             areaCode = int.Parse(number.Substring(0, 3));
             exchangePrefix = int.Parse(number.Substring(3, 3));
-            phoneNumber = int.Parse(number.Substring(3, 7));
+            phoneNumber = int.Parse(number.Substring(6, 4));
             formattedPhoneNumber = null;
         }
 
 
         public void Format()
         {
-            formattedPhoneNumber = areaCode + "-" + phoneNumber;
+            formattedPhoneNumber = $"({areaCode}) {exchangePrefix}-{phoneNumber}";
         }
 
         public override string ToString()

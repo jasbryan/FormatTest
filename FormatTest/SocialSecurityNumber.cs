@@ -17,8 +17,8 @@ namespace FormatTest
         public SocialSecurityNumber(string number)
         {
             groupOne = int.Parse(number.Substring(0, 3));
-            groupTwo = int.Parse(number.Substring(3, 3));
-            groupThree = int.Parse(number.Substring(6, 4));
+            groupTwo = int.Parse(number.Substring(3, 2));
+            groupThree = int.Parse(number.Substring(5, 4));
         }
 
         public void Format()

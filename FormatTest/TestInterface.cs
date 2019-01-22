@@ -23,8 +23,38 @@ namespace FormatTest
         {
             bool keepGoing = true;
 
-        private string userChoice;
-    }
-    }
+            string userChoice = "";
+
+            while(keepGoing)
+            {
+                userChoice = TestInterface.GetRecordType();
+                IFormatter input;
+                switch (userChoice)
+                {
+                    case "1":
+                        Console.Write("Please enter Phone number with just 10 digits:");
+                        input = new PhoneNumber(Console.ReadLine());
+                        input.Format();
+                        Console.WriteLine($"Here is your awesome output: {input}");
+                        break;
+                    case "2":
+                        Console.Write("Please enter Social Security number with just 9 digits:");
+                        input = new SocialSecurityNumber(Console.ReadLine());
+                        input.Format();
+                        Console.WriteLine($"Here is your awesome output: {input}");                        
+                        break;
+                    case "0":
+                        keepGoing = false;
+                        break;
+                    default:
+                        break;
+                };
+
+                
+
+            }
+
+        }
+
     }
 }

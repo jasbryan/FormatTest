@@ -21,9 +21,20 @@ namespace FIFOdemo
             myStack.Push(CR5);
 
             DisplayCusStack(myStack);
-            
-            
-           
+
+            Console.WriteLine("My first Pop: {0}", myStack.Pop().ToString());
+            DisplayCusStack(myStack);
+
+            Console.WriteLine("My first Peek: {0}", myStack.Peek().ToString());
+            DisplayCusStack(myStack);
+
+            Console.WriteLine("My second Pop: {0}", myStack.Pop().ToString());
+            DisplayCusStack(myStack);
+
+            Console.WriteLine("Added a few more objects back in");
+            myStack.Push(CR4);
+            myStack.Push(CR3);
+            DisplayCusStack(myStack);
 
         }
 

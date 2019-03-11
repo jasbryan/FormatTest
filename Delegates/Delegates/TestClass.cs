@@ -23,18 +23,16 @@ namespace Delegates
 
             var comp1 = new Computer(tempInt);
 
-            var fac1 = new FactorialNumbers();
-            
+            var fac1 = new FactorialNumbers();            
 
             var square1 = new SquareNumbers();
 
-            comp1.
-
-
-
-
+            comp1.GetAnswer(fac1.ComputeValue);
+            comp1.GetAnswer(square1.ComputeValue);
 
         }
+
+
     }
 
 }

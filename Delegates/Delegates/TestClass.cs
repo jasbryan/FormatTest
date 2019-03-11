@@ -27,8 +27,15 @@ namespace Delegates
 
             var square1 = new SquareNumbers();
 
+            var absv1 = new AbsoluteValue();
+
+            Console.WriteLine("HEre is the Factorial: ");
             comp1.GetAnswer(fac1.ComputeValue);
+            Console.WriteLine("HEre is the square:");
             comp1.GetAnswer(square1.ComputeValue);
+            Console.WriteLine("HEre is the Absolute Value: ");
+            comp1.GetAnswer(absv1.ComputeValue);
+
 
         }
 
